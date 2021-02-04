@@ -50,7 +50,7 @@ public class RegistrationFormTest {
         setDateOfBirth(TestValues.BIRTH_YEAR.value, TestValues.BIRTH_MONTH.value, TestValues.BIRTH_DAY.value);
         SUBJECTS.add(TestValues.SUBJECT_1.value);
         SUBJECTS.add(TestValues.SUBJECT_2.value);
-        setSUBJECTS(SUBJECTS);
+        setSubjects(SUBJECTS);
         $(By.xpath(format(RegistrationPage.HOBBIES_CHECKBOX, TestValues.HOBBIES_1.value))).click();
         $(By.xpath(format(RegistrationPage.HOBBIES_CHECKBOX, TestValues.HOBBIES_2.value))).click();
         uploadFile(TestValues.UPLOAD_FILE_PATH.value);
@@ -67,7 +67,7 @@ public class RegistrationFormTest {
         $(By.xpath(format(RegistrationPage.CALENDAR_DAYS_CONTAINER, day))).click();
     }
 
-    private void setSUBJECTS(List<String> SUBJECTS) {
+    private void setSubjects(List<String> SUBJECTS) {
         for (String subject : SUBJECTS) {
             $(RegistrationPage.SUBJECT_FIELD_INPUT).setValue(subject).pressEnter();
         }
