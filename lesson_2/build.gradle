@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-version 'unspecified'
+version '11'
 
 repositories {
     mavenCentral()
@@ -10,8 +10,8 @@ repositories {
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'com.codeborne:selenide:5.18.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-    compile group: 'com.codeborne', name: 'selenide', version: '5.18.0'
 }
 
 test {
